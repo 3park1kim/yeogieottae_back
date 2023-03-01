@@ -16,11 +16,11 @@ public class Group {
     @GeneratedValue
     @Column(name = "group_id")
     private Long id;
-    private String name;
-    private String color;
+    private String groupName;
+    private String groupColor;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "manager_id")
     private Member member;
 
     @OneToMany(mappedBy = "group")

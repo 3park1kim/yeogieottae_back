@@ -14,10 +14,12 @@ public class Alert {
     private Long id;
 
     private String msg;
+
+    @Column(name="to_user")
     private String toUSer;
     private LocalDateTime msgTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "from_user")
     private Member member;
 }
